@@ -1,0 +1,36 @@
+package Test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		System.setProperty("webDriver.gecko.driver","C:\\Users\\Hp\\eclipse-workspace\\Assignment\\Driver\\geckodriver.exe");
+        WebDriver driver = new FirefoxDriver();
+        driver.get("https://www.saucedemo.com/");
+       driver.manage().window().maximize();
+       
+       if(driver.getCurrentUrl().endsWith("www.saucedemo.com/")) 
+       
+       {
+    	   System.out.println("This Script Passed");
+       }
+       
+       else 
+       
+       {
+    	   System.out.println("This Script Failed");
+       }
+		
+	}
+		
+		
+}
+	
+
+
